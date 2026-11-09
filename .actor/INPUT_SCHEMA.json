@@ -53,31 +53,38 @@
     },
     "logisticsRub": {
       "title": "Forward logistics override, RUB",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Forward logistics per unit, RUB."
     },
     "sspPct": {
       "title": "SPP (logistics discount), %",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Marketplace compensates part of logistics."
     },
     "returnsPct": {
       "title": "Return rate override, %",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Share of units returned."
     },
     "returnLogisticsRub": {
       "title": "Return processing override, RUB",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Cost of processing one return, RUB."
     },
     "adsPct": {
       "title": "Ads override, % of revenue",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Ads as % of revenue."
     },
     "packRub": {
       "title": "Packaging override, RUB per unit",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Packaging cost per unit, RUB."
     },
     "taxPct": {
       "title": "Tax override, % of revenue",
-      "type": "number"
+      "type": "number",
+      "description": "Leave empty to use the preset. Tax as % of revenue (USN 6% by default)."
     },
     "fixedMonthlyRub": {
       "title": "Fixed monthly costs, RUB",
@@ -94,22 +101,26 @@
     "promoDiscountPct": {
       "title": "Promo discount, %",
       "type": "number",
-      "default": 30
+      "default": 30,
+      "description": "Discount from the card price during 11.11 / Black Friday."
     },
     "promoCommissionPct": {
       "title": "Promo commission, %",
       "type": "number",
-      "default": 24
+      "default": 24,
+      "description": "Marketplace commission during the promo."
     },
     "promoAdsPct": {
       "title": "Promo ads, % of promo revenue",
       "type": "number",
-      "default": 20
+      "default": 20,
+      "description": "Ads as % of promo revenue during the promo."
     },
     "promoReturnsPct": {
       "title": "Promo return rate, %",
       "type": "number",
-      "default": 10
+      "default": 10,
+      "description": "Return rate during the promo."
     },
     "promoMinMarginPct": {
       "title": "Minimum promo margin, %",
@@ -136,7 +147,8 @@
       "type": "integer",
       "default": 20,
       "minimum": 5,
-      "maximum": 120
+      "maximum": 120,
+      "description": "Per-URL HTTP timeout for tableUrl."
     }
   }
 }
