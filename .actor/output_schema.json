@@ -1,0 +1,31 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "WB/Ozon margin & competitor — output",
+  "description": "One row per SKU with clean 2026 unit economics, 11.11 stress test and loss-making flags, plus a summary row and one offer record. Export as CSV or XLSX.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "All rows (JSON)",
+      "description": "SKU rows, the summary record, error rows and the offer record.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "csv": {
+      "type": "string",
+      "title": "All rows (CSV)",
+      "description": "Dataset as CSV, ready for Excel / Google Sheets.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?format=csv"
+    },
+    "xlsx": {
+      "type": "string",
+      "title": "All rows (XLSX)",
+      "description": "Dataset as a real Excel workbook.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?format=xlsx"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Run summary",
+      "description": "SKU count, loss-making count, promo red count, average margins and worst SKUs.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}

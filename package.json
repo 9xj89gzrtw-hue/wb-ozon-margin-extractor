@@ -1,0 +1,42 @@
+{
+  "name": "wb-ozon-competitor-and-margin-extractor",
+  "version": "1.0.0",
+  "description": "Apify Actor: WB/Ozon 2026 unit economics — clean margin, ROI, breakeven, 11.11 stress test, maxDiscount, loss-making SKU flags.",
+  "type": "module",
+  "main": "src/run.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test",
+    "smoke": "node src/main.js --input examples/input.json --out /tmp/wb-ozon-margin-smoke.json"
+  },
+  "keywords": [
+    "apify",
+    "apify-actor",
+    "wildberries",
+    "ozon",
+    "marketplace",
+    "margin",
+    "unit-economics",
+    "profit",
+    "roi",
+    "breakeven",
+    "maxdiscount",
+    "11.11",
+    "black-friday",
+    "seller",
+    "ecommerce"
+  ],
+  "author": "9xj89gzrtw-hue",
+  "license": "MIT",
+  "homepage": "https://9xj89gzrtw-hue.github.io/data-clipper/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9xj89gzrtw-hue/wb-ozon-margin-extractor.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "apify": "^3.2.0"
+  }
+}

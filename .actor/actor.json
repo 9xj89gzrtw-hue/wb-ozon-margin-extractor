@@ -1,0 +1,31 @@
+{
+  "actorSpecification": 1,
+  "name": "wildberries-ozon-competitor-and-margin-extractor",
+  "title": "Wildberries & Ozon Competitor and Margin Extractor 2026",
+  "description": "Paste a WB/Ozon seller price list or product table and get clean 2026 unit economics: margin, ROI, breakeven, competitor price gap, 11.11 / Black Friday stress test with maxDiscount, and explicit loss-making SKU flags. Export to CSV/XLSX. Free tier 50 SKUs; TW1-CLIP Pro key removes the cap.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./INPUT_SCHEMA.json",
+  "dockerfile": "../Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "categories": [
+    "ECOMMERCE",
+    "BUSINESS",
+    "DATA_EXTRACTION"
+  ],
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "meta": {
+    "generatedBy": "9xj89gzrtw-hue/wb-ozon-margin-extractor",
+    "store": "https://9xj89gzrtw-hue.github.io/data-clipper/",
+    "platiLot": "https://plati.market/itm/6354602"
+  },
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 900,
+    "memoryMbytes": 512
+  },
+  "output": "./output_schema.json"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "WB/Ozon margin & competitor input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "products": {
+      "title": "Products (JSON list)",
+      "type": "array",
+      "description": "One object per SKU: name, price, cost, commission, logistics, competitor. RU and EN keys both work.",
+      "editor": "json",
+      "default": [],
+      "items": { "type": "object" }
+    },
+    "tableText": {
+      "title": "Paste a table (CSV / TSV / JSON)",
+      "type": "string",
+      "description": "Paste the price list exactly as exported from WB/Ozon analytics. First row = headers. Comma, semicolon and tab delimiters are auto-detected. RU headers: товар, цена, закуп, комиссия, логистика, конкурент.",
+      "editor": "textarea",
+      "default": ""
+    },
+    "tableUrl": {
+      "title": "Public CSV / TSV / JSON URL",
+      "type": "string",
+      "description": "Direct link to a public price-list export (Google Sheets CSV export, own CDN, etc.). No login-protected pages.",
+      "editor": "textfield",
+      "default": ""
+    },
+    "marketplace": {
+      "title": "Marketplace preset",
+      "type": "string",
+      "description": "Base 2026 fee profile. wb: commission 22%, logistics 60 RUB, returns 3%, ads 10%, pack 15 RUB, tax 6%. ozon: 25 / 55 / 5 / 12 / 18 / 6. telegram: direct price list, no commission.",
+      "editor": "select",
+      "default": "wb",
+      "enum": ["wb", "ozon", "telegram", "custom"],
+      "enumTitles": ["Wildberries FBO 2026", "Ozon FBO 2026", "Telegram / direct price", "Custom (all zeros)"]
+    },
+    "commissionPct": { "title": "Commission override, %", "type": "number", "description": "Leave empty to use the preset.", "default": null },
+    "logisticsRub": { "title": "Forward logistics override, RUB", "type": "number", "default": null },
+    "sspPct": { "title": "SPP (logistics discount), %", "type": "number", "default": null },
+    "returnsPct": { "title": "Return rate override, %", "type": "number", "default": null },
+    "returnLogisticsRub": { "title": "Return processing override, RUB", "type": "number", "default": null },
+    "adsPct": { "title": "Ads override, % of revenue", "type": "number", "default": null },
+    "packRub": { "title": "Packaging override, RUB per unit", "type": "number", "default": null },
+    "taxPct": { "title": "Tax override, % of revenue", "type": "number", "default": null },
+    "fixedMonthlyRub": { "title": "Fixed monthly costs, RUB", "type": "number", "description": "Used for the breakeven-units column.", "default": 120000 },
+    "stressTest1111": {
+      "title": "Run the 11.11 / Black Friday stress test",
+      "type": "boolean",
+      "description": "Adds the promo block to every SKU: promo price, promo profit/margin/ROI and the maximum discount that still clears the minimum margin.",
+      "default": true
+    },
+    "promoDiscountPct": { "title": "Promo discount, %", "type": "number", "default": 30 },
+    "promoCommissionPct": { "title": "Promo commission, %", "type": "number", "default": 24 },
+    "promoAdsPct": { "title": "Promo ads, % of promo revenue", "type": "number", "default": 20 },
+    "promoReturnsPct": { "title": "Promo return rate, %", "type": "number", "default": 10 },
+    "promoMinMarginPct": { "title": "Minimum promo margin, %", "type": "number", "description": "The floor used for maxDiscount. Default 10%.", "default": 10 },
+    "maxRows": {
+      "title": "Max SKUs per run",
+      "type": "integer",
+      "description": "Free tier: 50. The TW1-CLIP Pro key removes the cap up to 5000.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 5000
+    },
+    "includeOffer": {
+      "title": "Include the offer record",
+      "type": "boolean",
+      "description": "Adds one final record with the TW1-CLIP Pro key, price and checkout links.",
+      "default": true
+    },
+    "requestTimeoutSecs": {
+      "title": "URL fetch timeout, seconds",
+      "type": "integer",
+      "default": 20,
+      "minimum": 5,
+      "maximum": 120
+    }
+  }
+}

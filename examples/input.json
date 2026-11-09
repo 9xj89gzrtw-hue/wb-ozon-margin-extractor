@@ -1,0 +1,18 @@
+{
+  "marketplace": "wb",
+  "stressTest1111": true,
+  "promoDiscountPct": 30,
+  "promoCommissionPct": 24,
+  "promoAdsPct": 20,
+  "promoReturnsPct": 10,
+  "promoMinMarginPct": 10,
+  "maxRows": 50,
+  "includeOffer": true,
+  "products": [
+    { "name": "Термокружка 450 мл", "sku": "TM-450", "price": 1590, "cost": 540, "commission": 25, "logistics": 55, "competitor": 1490 },
+    { "name": "Органайзер для косметики", "sku": "ORG-01", "price": 1290, "cost": 470, "commission": 24, "logistics": 52, "competitor": 1390 },
+    { "name": "Свеча ароматерапия", "sku": "CND-02", "price": 890, "cost": 260, "commission": 27, "logistics": 50, "competitor": 990 },
+    { "name": "Гантели виниловые 2х3 кг", "sku": "DMB-6", "price": 2690, "cost": 1450, "commission": 21, "logistics": 85, "competitor": 2590 },
+    { "name": "Коврик для йоги TPE", "sku": "YOG-TPE", "price": 2450, "cost": 1120, "commission": 22, "logistics": 80, "competitor": 2390 }
+  ]
+}

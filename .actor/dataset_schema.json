@@ -1,0 +1,34 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "type": "object",
+    "properties": {
+      "_type": {
+        "type": "string",
+        "description": "sku | summary | offer | error"
+      },
+      "name": { "type": ["string", "null"] },
+      "sku": { "type": ["string", "null"] },
+      "price": { "type": ["number", "null"] },
+      "cost": { "type": ["number", "null"] },
+      "commissionPct": { "type": ["number", "null"] },
+      "commission": { "type": ["number", "null"] },
+      "logistics": { "type": ["number", "null"] },
+      "returnCost": { "type": ["number", "null"] },
+      "tax": { "type": ["number", "null"] },
+      "ads": { "type": ["number", "null"] },
+      "pack": { "type": ["number", "null"] },
+      "profit": { "type": ["number", "null"] },
+      "margin": { "type": ["number", "null"] },
+      "roi": { "type": ["number", "null"] },
+      "breakevenUnits": { "type": ["number", "null"] },
+      "minPrice": { "type": ["number", "null"] },
+      "verdict": { "type": ["string", "null"] },
+      "lossMaking": { "type": ["boolean", "null"] },
+      "competitor": { "type": ["object", "null"] },
+      "promo": { "type": ["object", "null"] },
+      "promoVerdict": { "type": ["string", "null"] },
+      "promoLossMaking": { "type": ["boolean", "null"] }
+    }
+  }
+}
